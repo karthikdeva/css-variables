@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #333;
+    --border-base: 1px solid #333;
+    --space-md: 0.5rem;
+    --space-lg: 1rem;
+    --color-primary: #000;
+    --space-top: 0;
+}
+
+.card-green,
+[theme="green"] {
+    --bg-base: green;
+}
+
+[theme="orange"] {
+    --bg-base: orange;
+}
+
+.card-blue {
+    --bg-base: linear-gradient(to right, #4a00e0, #8e2de2);
+    --color-primary: #fff;
+    --border-base: 1px solid #fff;
+    position: relative;
+    top: var(--space-top);
+}
+
+.card {
+    background: var(--bg-base, #000);
+    padding: var(--space-lg);
+    margin: calc(var(--space-lg));
+    color: var(--color-primary);
+    border-radius: calc(var(--space-md)/2);
+}
+
+.card-header,
+.card-content {
+    margin-bottom: var(--space-md);
+}
+
+.card-content {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+}
+
+.card-header {
+    border-bottom: var(--border-base);
+    padding-bottom: var(--space-md);
+}
+
+.card-footer {
+    border-top: var(--border-base);
+    padding-top: var(--space-md)
+}
